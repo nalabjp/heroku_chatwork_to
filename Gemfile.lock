@@ -67,7 +67,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  chatwork_to
+  chatwork_to (~> 0.0.4)
   foreman
   sinatra
   thin
