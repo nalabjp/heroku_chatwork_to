@@ -36,4 +36,4 @@ And addons scheduler configuration as:
 $ heroku addons:add scheduler:standard
 $ heroku addons:open scheduler
 ```
-Use `bundle exec ruby task.rb` for scheduler job.
+Use `curl http://your_heroku_app_name.herokuapp.com` for scheduler job.
