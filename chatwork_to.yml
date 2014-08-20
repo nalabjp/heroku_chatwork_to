@@ -6,6 +6,7 @@ chatwork:
     - "<%= ENV['CW2_ROOMS_2'] %>"
     - "<%= ENV['CW2_ROOMS_3'] %>"
     - "<%= ENV['CW2_ROOMS_4'] %>"
+    - "<%= ENV['CW2_ROOMS_5'] %>"
 notifiers:
   -
     name: simple
