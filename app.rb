@@ -14,7 +14,7 @@ get '/' do
 end
 
 post '/cw' do
-  params = JSON.parse(request.body.read)
+  params = request.params
 
   # validation
   raise "Invalid command : #{params['command']}"        unless params['command'].eql?('/cw')
