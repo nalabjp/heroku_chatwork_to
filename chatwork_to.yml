@@ -1,12 +1,7 @@
 chatwork:
   email: "<%= ENV['CW2_EMAIL'] %>"
   pass: "<%= ENV['CW2_PASS'] %>"
-  rooms:
-    - "<%= ENV['CW2_ROOMS_1'] %>"
-    - "<%= ENV['CW2_ROOMS_2'] %>"
-    - "<%= ENV['CW2_ROOMS_3'] %>"
-    - "<%= ENV['CW2_ROOMS_4'] %>"
-    - "<%= ENV['CW2_ROOMS_5'] %>"
+  rooms: !ruby/array <%= ENV['CW2_ROOMS'].split(',').to_s %>
 notifiers:
   -
     name: simple
