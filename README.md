@@ -1,4 +1,6 @@
 # ChatworkTo on Heroku
+[ChatworkTo](https://github.com/nalabjp/chatwork_to)
+
 ## Setup
 ### Clone repository
 ```
@@ -7,7 +9,7 @@ $ cd heroku_chatwork_to
 ```
 
 ### Configure chatwork_to.yml
-Edit chatwork_to.yml for your settings. For example, I use [direnv](http://direnv.net, 'direnv').
+Edit chatwork_to.yml for your settings. For example, I use [direnv](http://direnv.net).
 ```
 $ vim chatwork_to.yml
 ```
