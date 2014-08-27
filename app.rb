@@ -6,7 +6,7 @@ require 'chatwork'
 
 set :server, 'thin'
 
-ChatWork.api_key = ENV['CMD_CW_CHATWORK_TOKEN']
+ChatWork.api_key = ENV['CW_CHATWORK_TOKEN']
 raise 'Require ChatWork token' unless ChatWork.api_key
 
 get '/' do
@@ -17,11 +17,11 @@ post '/cw' do
   params = request.params
 
   # validation
-  raise "Invalid command : #{params['command']}"        unless params['command'].eql?('/cw')
-  raise "Invalid token : #{params['token']}"            unless params['token'].eql?(ENV['CMD_CW_SLACK_TOKEN'])
-  raise "Invalid team_id : #{params['team_id']}"        unless params['team_id'].eql?(ENV['CMD_CW_TEAM_ID'])
-  raise "Invalid user_id : #{params['user_id']}"        unless params['user_id'].eql?(ENV['CMD_CW_USER_ID'])
-  raise "Invalid channel_id : #{params['channel_id']}"  unless params['channel_id'].eql?(ENV['CMD_CW_CHANNEL_ID'])
+  raise "Invalid command : #{params['command']}"        unless params['command'].eql?(ENV['CW_COMMAND'])
+  raise "Invalid token : #{params['token']}"            unless params['token'].eql?(ENV['CW_SLACK_TOKEN'])
+  raise "Invalid team_id : #{params['team_id']}"        unless params['team_id'].eql?(ENV['CW_TEAM_ID'])
+  raise "Invalid user_id : #{params['user_id']}"        unless params['user_id'].eql?(ENV['CW_USER_ID'])
+  raise "Invalid channel_id : #{params['channel_id']}"  unless params['channel_id'].eql?(ENV['CW_CHANNEL_ID'])
   raise "Invalid text : #{params['text']}"              unless match = params['text'].match(/\Arid:([0-9]+) (.+)\Z/)
 
   # send message
