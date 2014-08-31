@@ -7,13 +7,14 @@ require 'chatwork'
 set :server, 'thin'
 
 ChatWork.api_key = ENV['CW_CHATWORK_TOKEN']
-raise 'Require ChatWork token' unless ChatWork.api_key
 
 get '/' do
   'Hello chatwork_to on heroku'
 end
 
 post '/cw' do
+  return 'Require ChatWork token' unless ChatWork.api_key
+
   params = request.params
 
   # validation
