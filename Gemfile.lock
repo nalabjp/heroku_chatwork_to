@@ -84,7 +84,7 @@ PLATFORMS
 
 DEPENDENCIES
   chatwork
-  chatwork_to (~> 0.0.4)
+  chatwork_to (= 0.0.5)
   foreman
   sinatra
   sinatra-contrib
